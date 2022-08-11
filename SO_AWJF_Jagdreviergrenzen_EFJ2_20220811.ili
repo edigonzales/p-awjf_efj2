@@ -1,0 +1,33 @@
+INTERLIS 2.3;
+
+/** !!------------------------------------------------------------------------------
+ *  !! Version    | wer | Änderung
+ *  !!------------------------------------------------------------------------------
+ *  !! 2022-08-11 | sz  | Ersterfassung
+ *  !!==============================================================================
+ */
+!!@ technicalContact=mailto:agi@bd.so.ch
+!!@ furtherInformation=http://geo.so.ch/models/AWJF/SO_AWJF_Jagdreviergrenzen_EFJ2_20220811.uml
+!!@ shortDescription="Transfermodell zur Lieferung der Jagdreviere an EFJ2."
+!!@ title="Jagdreviergrenzen für EFJ2"
+MODEL SO_AWJF_Jagdreviergrenzen_EFJ2_20220811 (de)
+AT "https://awjf.so.ch"
+VERSION "2022-08-11"  =
+  IMPORTS GeometryCHLV95_V1;
+
+  TOPIC Jagdreviere =
+
+    /** Jagdrevier... Wie heissen die in anderen Kantonen?
+     */
+    CLASS Jagdrevier =
+      /** Identifikator des Reviers. Dient als Fremdschlüssel.
+       */
+      Nummer : MANDATORY TEXT*100;
+      /** Reviergrenze
+       */
+      Geometrie : MANDATORY GeometryCHLV95_V1.MultiSurface;
+    END Jagdrevier;
+
+  END Jagdreviere;
+
+END SO_AWJF_Jagdreviergrenzen_EFJ2_20220811.
