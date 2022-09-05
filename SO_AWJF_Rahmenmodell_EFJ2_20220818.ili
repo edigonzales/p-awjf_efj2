@@ -37,7 +37,7 @@ VERSION "2022-08-11"  =
       MANDATORY CONSTRAINT DEFINED(Geometrie_Flaeche) OR DEFINED(Geometrie_Linie);
       /** Als Enumeration-Ersatz. Eine Ergänzung einer Enumeration hat auf eine DB-Struktur grössere Auswirkung.
        */
-      MANDATORY CONSTRAINT Typ == "Jagdrevier";
+      MANDATORY CONSTRAINT Typ=="Jagdrevier" OR Typ=="Wildraum" OR Typ=="Wildregion" OR Typ=="Fischereirevier"  OR Typ=="Gewässerstrecke" OR Typ=="Kanton";
       /** Ein Identifikator und ein Typ sind zusammen eindeutig.
        */
       UNIQUE Identifikator, Typ;
