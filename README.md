@@ -38,4 +38,7 @@ Wegen Fischereireviere nun mit PostgreSQL:
 ```
 java -jar /Users/stefan/apps/ili2pg-4.9.0/ili2pg-4.9.0.jar --dbschema awjf_efj2_gebiete --dbhost localhost --dbport 54321 --dbdatabase edit --dbusr ddluser --dbpwd ddluser --strokeArcs --defaultSrsCode 2056 --nameByTopic --createMetaInfo --createGeomIdx --models SO_AWJF_Rahmenmodell_EFJ2_20220818 --modeldir ".;https://models.geo.admin.ch" --doSchemaImport --import ch.so.awjf.gebiete_efj2.xtf
 
+java -jar /Users/stefan/apps/ili2pg-4.9.0/ili2pg-4.9.0.jar --dbschema awjf_efj2_gebiete --dbhost localhost --dbport 54321 --dbdatabase edit --dbusr ddluser --dbpwd ddluser --strokeArcs --defaultSrsCode 2056 --nameByTopic --createMetaInfo --createGeomIdx --models SO_AWJF_Rahmenmodell_EFJ2_20220818 --modeldir ".;https://models.geo.admin.ch" --export ch.so.awjf.gebiete_efj2_20221103.xtf
+
+
 ```
