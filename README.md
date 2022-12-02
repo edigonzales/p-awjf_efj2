@@ -42,3 +42,8 @@ java -jar /Users/stefan/apps/ili2pg-4.9.0/ili2pg-4.9.0.jar --dbschema awjf_efj2_
 
 
 ```
+
+
+```
+curl --insecure -i -X POST -F file=@ch.so.awjf.gebiete_efj2_20221103.xtf -F valid_from=2022-12-02 https://efj-services-i.verw.rootso.org/webapi/api/geo/geodata
+```
